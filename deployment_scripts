@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Iniciando despliegue..."
+
+# Variables de entorno
+APP_IMAGE="my_app:latest"
+DEPLOY_SERVER="usuario@servidor.com"
+
+# Copiar imagen al servidor
+docker save $APP_IMAGE | ssh $DEPLOY_SERVER "docker load"
+
+# Desplegar contenedor
+ssh $DEPLOY_SERVER "
+docker stop app || true &&
+docker rm app || true &&
+docker run -d --name app -p 80:8080 $APP_IMAGE
+"
+
+echo "Despliegue completado con éxito."
