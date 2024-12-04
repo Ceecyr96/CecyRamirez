@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Desplegando la aplicación..."
+# Comando para desplegar la aplicación (puede ser un comando de Docker, Kubernetes, etc.)
