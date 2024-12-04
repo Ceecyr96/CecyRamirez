@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Configurando entorno de liberación..."
+# Comandos para crear el entorno de pruebas (pueden ser contenedores, servicios, etc.)
