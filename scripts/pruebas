@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Ejecutando pruebas..."
+# Aquí se ejecutan las pruebas
